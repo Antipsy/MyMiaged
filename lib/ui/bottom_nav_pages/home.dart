@@ -67,12 +67,16 @@ class _HomeState extends State<Home> {
           child: Container(
         child: Column(
           children: [
+            SizedBox(
+              height: 10,
+            ),
+
             Padding(
-              padding: EdgeInsets.only(left: 20.w, right: 20.w),
+              padding: EdgeInsets.only(left: 20, right: 20),
               child: Row(
                 children: [
               Expanded(child:SizedBox(
-                    height:60.h,
+                    height:40,
                     child: TextFormField(
                       controller: _searchController,
                       readOnly: true,
@@ -85,15 +89,15 @@ class _HomeState extends State<Home> {
                             borderRadius: BorderRadius.all(Radius.circular(0)),
                             borderSide: BorderSide(color: Colors.grey)),
                         hintText: "Search products here",
-                        hintStyle: TextStyle(fontSize: 15.sp),
+                        hintStyle: TextStyle(fontSize: 17),
                       ),
                       onTap: () => Navigator.push(context,
                           CupertinoPageRoute(builder: (_) => SearchScreen())),
                     ),
                   ),),
                   Container(
-                    height: 60.h,
-                    width: 60.h,
+                    height: 40,
+                    width: 40,
                     color: AppColors.vinted_color,
                     child: Center(
                       child: Icon(Icons.search,color: Colors.white,),
@@ -103,22 +107,22 @@ class _HomeState extends State<Home> {
               ),
             ),
             SizedBox(
-              height: 10.h,
+              height: 10,
             ),
             AspectRatio(
-              aspectRatio: 3.5,
+              aspectRatio: 3.6,
               child: CarouselSlider(
                   items: _carouselImages
                       .map((item) =>
 
                             Container(
-                              height: 50.h,
-                              width: 280.w,
+
+                              width: ScreenUtil().screenWidth,
 
                               decoration: BoxDecoration(
                                   image: DecorationImage(
                                       image: NetworkImage(item),
-                                      fit: BoxFit.fitWidth)),
+                                      fit: BoxFit.fill)),
                             ),
                           )
                       .toList(),
@@ -134,7 +138,7 @@ class _HomeState extends State<Home> {
                       })),
             ),
             SizedBox(
-              height: 10.h,
+              height: 10,
             ),
             DotsIndicator(
               dotsCount:

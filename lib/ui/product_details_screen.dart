@@ -105,7 +105,7 @@ class _ProductDetailsState extends State<ProductDetails> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             AspectRatio(
-              aspectRatio: 3,
+              aspectRatio: 3.7,
               child: CarouselSlider(
                   items: widget._product['product-img']
                       .map<Widget>((item) =>
@@ -126,7 +126,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                       })),
             ),
             Text( widget._product['product-titre'],
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
             ),
             Text("taille : ${widget._product['product-taille']}"),
             Text("marque : ${widget._product['product-marque']}"),
@@ -136,21 +136,23 @@ class _ProductDetailsState extends State<ProductDetails> {
             Text(
               "${widget._product['product-prix'].toString()} DH",
               style: TextStyle(
-                  fontWeight: FontWeight.bold, fontSize: 30, color: Colors.red),
+                  fontWeight: FontWeight.bold, fontSize: 25, color: Colors.red),
             ),
             Divider(),
-            SizedBox(
-              width: 1.sw,
-              height: 56.h,
-              child: ElevatedButton(
-                onPressed: () => addToCart(),
-                child: Text(
-                  "Ajouter au panier",
-                  style: TextStyle(color: Colors.white, fontSize: 18.sp),
-                ),
-                style: ElevatedButton.styleFrom(
-                  primary: AppColors.vinted_color,
-                  elevation: 3,
+            Center(
+              child: SizedBox(
+                width: 0.5.sw,
+                height: 56,
+                child: ElevatedButton(
+                  onPressed: () => addToCart(),
+                  child: Text(
+                    "Ajouter au panier",
+                    style: TextStyle(color: Colors.white, fontSize: 25),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    primary: AppColors.vinted_color,
+                    elevation: 3,
+                  ),
                 ),
               ),
             ),

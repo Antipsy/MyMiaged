@@ -54,22 +54,23 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         child: Column(
           children: [
             SizedBox(
-              height: 40.h,
+
               width: ScreenUtil().screenWidth,
-              child: Padding(
-                padding: EdgeInsets.only(left: 150.w),
+
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
 
-                    Text(
-                      "Sign Up",
-                      style: TextStyle(fontSize: 22.sp, color: Colors.white),
+                    Center(
+                      child: Text(
+                        "Sign Up",
+                        style: TextStyle(fontSize: 30, color: Colors.white),
+                      ),
                     ),
                   ],
                 ),
-              ),
+
             ),
             Expanded(
               child: Container(
@@ -82,24 +83,24 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.all(20.w),
+                  padding: EdgeInsets.all(20),
                   child: SingleChildScrollView(
                     scrollDirection: Axis.vertical,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
-                          height: 10.h,
+                          height: 10,
                         ),
                         Center(child: Image.network("https://firebasestorage.googleapis.com/v0/b/vinted-clone-336fc.appspot.com/o/miaged1.png?alt=media&token=23e005e4-7e09-403e-9604-cfff1ff92c3e",height: 200.h,width: 200.w)),
                         SizedBox(
-                          height: 15.h,
+                          height: 15,
                         ),
                         Row(
                           children: [
                             Container(
-                              height: 48.h,
-                              width: 41.w,
+                              height: 48,
+                              width: 41,
                               decoration: BoxDecoration(
                                   color: AppColors.vinted_color,
                                   borderRadius: BorderRadius.circular(12.r)),
@@ -107,12 +108,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 child: Icon(
                                   Icons.email_outlined,
                                   color: Colors.white,
-                                  size: 20.w,
+                                  size: 20,
                                 ),
                               ),
                             ),
                             SizedBox(
-                              width: 10.w,
+                              width: 10,
                             ),
                             Expanded(
                               child: TextField(
@@ -120,12 +121,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 decoration: InputDecoration(
                                   hintText: "exemple@gmail.com",
                                   hintStyle: TextStyle(
-                                    fontSize: 14.sp,
+                                    fontSize: 14,
                                     color: Color(0xFF414041),
                                   ),
                                   labelText: 'EMAIL',
                                   labelStyle: TextStyle(
-                                    fontSize: 15.sp,
+                                    fontSize: 15,
                                     color: AppColors.vinted_color,
                                   ),
                                 ),
@@ -134,13 +135,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                           ],
                         ),
                         SizedBox(
-                          height: 10.h,
+                          height: 10,
                         ),
                         Row(
                           children: [
                             Container(
-                              height: 48.h,
-                              width: 41.w,
+                              height: 48,
+                              width: 41,
                               decoration: BoxDecoration(
                                   color: AppColors.vinted_color,
                                   borderRadius: BorderRadius.circular(12.r)),
@@ -148,12 +149,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 child: Icon(
                                   Icons.lock_outline,
                                   color: Colors.white,
-                                  size: 20.w,
+                                  size: 20,
                                 ),
                               ),
                             ),
                             SizedBox(
-                              width: 10.w,
+                              width: 10,
                             ),
                             Expanded(
                               child: TextField(
@@ -162,12 +163,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                 decoration: InputDecoration(
                                   hintText: "password must be 6 character",
                                   hintStyle: TextStyle(
-                                    fontSize: 14.sp,
+                                    fontSize: 14,
                                     color: Color(0xFF414041),
                                   ),
                                   labelText: 'PASSWORD',
                                   labelStyle: TextStyle(
-                                    fontSize: 15.sp,
+                                    fontSize: 15,
                                     color: AppColors.vinted_color,
                                   ),
                                   suffixIcon: _obscureText == true
@@ -179,7 +180,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                           },
                                           icon: Icon(
                                             Icons.remove_red_eye,
-                                            size: 20.w,
+                                            size: 20,
                                           ))
                                       : IconButton(
                                           onPressed: () {
@@ -189,7 +190,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                                           },
                                           icon: Icon(
                                             Icons.visibility_off,
-                                            size: 20.w,
+                                            size: 20,
                                           )),
                                 ),
                               ),
@@ -198,36 +199,38 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         ),
 
                         SizedBox(
-                          height: 50.h,
+                          height: 50,
                         ),
                         // elevated button
-                        SizedBox(
-                          width: 1.sw,
-                          height: 56.h,
-                          child: ElevatedButton(
-                            onPressed: () {
-                              signUp();
-                            },
-                            child: Text(
-                              "Continue",
-                              style: TextStyle(
-                                  color: Colors.white, fontSize: 18.sp),
-                            ),
-                            style: ElevatedButton.styleFrom(
-                              primary: AppColors.vinted_color,
-                              elevation: 3,
+                        Center(
+                          child: SizedBox(
+                            width: 0.5.sw,
+                            height: 56,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                signUp();
+                              },
+                              child: Text(
+                                "Continue",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 25),
+                              ),
+                              style: ElevatedButton.styleFrom(
+                                primary: AppColors.vinted_color,
+                                elevation: 3,
+                              ),
                             ),
                           ),
                         ),
                         SizedBox(
-                          height: 20.h,
+                          height: 20,
                         ),
                         Wrap(
                           children: [
                             Text(
                               "Don't have an account?",
                               style: TextStyle(
-                                fontSize: 13.sp,
+                                fontSize: 13,
                                 fontWeight: FontWeight.w600,
                                 color: Color(0xFFBBBBBB),
                               ),
@@ -236,7 +239,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               child: Text(
                                 " Sign In",
                                 style: TextStyle(
-                                  fontSize: 13.sp,
+                                  fontSize: 13,
                                   fontWeight: FontWeight.w600,
                                   color: AppColors.vinted_color,
                                 ),

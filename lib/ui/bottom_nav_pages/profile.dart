@@ -38,13 +38,13 @@ class _ProfileState extends State<Profile> {
   setDataToTextField(data){
     return  Column(
       children: [
-        Center(child: Image.network("https://firebasestorage.googleapis.com/v0/b/vinted-clone-336fc.appspot.com/o/user1.png?alt=media&token=7cf9d7b8-f39e-450c-94b9-808fc5e5142e",height: 120,width: 120)),
+        Center(child: Image.network("https://firebasestorage.googleapis.com/v0/b/vinted-clone-336fc.appspot.com/o/user1.png?alt=media&token=7cf9d7b8-f39e-450c-94b9-808fc5e5142e",height: 75,width: 75)),
         TextFormField(
           controller: _emailController = TextEditingController(text: auth.currentUser!.email),
           decoration: InputDecoration(
             labelText: 'Email',
             labelStyle: TextStyle(
-              fontSize: 15.sp,
+              fontSize: 15,
               color: AppColors.vinted_color,
             ),
           ),
@@ -55,7 +55,7 @@ class _ProfileState extends State<Profile> {
           decoration: InputDecoration(
             labelText: 'Nom',
             labelStyle: TextStyle(
-              fontSize: 15.sp,
+              fontSize: 15,
               color: AppColors.vinted_color,
             ),
           ),
@@ -65,7 +65,7 @@ class _ProfileState extends State<Profile> {
           decoration: InputDecoration(
             labelText: 'Prenom',
             labelStyle: TextStyle(
-              fontSize: 15.sp,
+              fontSize: 15,
               color: AppColors.vinted_color,
             ),
           ),
@@ -76,7 +76,7 @@ class _ProfileState extends State<Profile> {
           decoration: InputDecoration(
             labelText: 'Date de naissance',
             labelStyle: TextStyle(
-              fontSize: 15.sp,
+              fontSize: 15,
               color: AppColors.vinted_color,
             ),
             suffixIcon: IconButton(
@@ -90,7 +90,7 @@ class _ProfileState extends State<Profile> {
           decoration: InputDecoration(
             labelText: 'Address',
             labelStyle: TextStyle(
-              fontSize: 15.sp,
+              fontSize: 15,
               color: AppColors.vinted_color,
             ),
           ),
@@ -100,7 +100,7 @@ class _ProfileState extends State<Profile> {
           decoration: InputDecoration(
             labelText: 'Code postal',
             labelStyle: TextStyle(
-              fontSize: 15.sp,
+              fontSize: 15,
               color: AppColors.vinted_color,
             ),
           ),
@@ -110,13 +110,13 @@ class _ProfileState extends State<Profile> {
           decoration: InputDecoration(
             labelText: 'Ville',
             labelStyle: TextStyle(
-              fontSize: 15.sp,
+              fontSize: 15,
               color: AppColors.vinted_color,
             ),
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 5,
         ),
         ElevatedButton(onPressed: ()=>updateData(), child: Text("Update"),
           style: ElevatedButton.styleFrom(

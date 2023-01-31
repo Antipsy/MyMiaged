@@ -47,12 +47,12 @@ class _SearchScreenState extends State<SearchScreen> {
                 decoration: InputDecoration(
                   hintText: "nom de produit",
                   hintStyle: TextStyle(
-                    fontSize: 14.sp,
+                    fontSize: 15,
                     color: Color(0xFF414041),
                   ),
                   labelText: 'Recherche',
                   labelStyle: TextStyle(
-                    fontSize: 15.sp,
+                    fontSize: 15,
                     color: AppColors.vinted_color,
                   ),
                 ),
